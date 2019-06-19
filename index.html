@@ -28,12 +28,34 @@
             </div>
         </div>
         <div>
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
+            <button class="button" id="anexoI" onclick="alterAttchementHtml1()">Anexo I</button>
+            <button class="button" id="anexoIII" onclick="alterAttchementHtml()">Anexo III</button>
+        </div>
+        <div id="formulario">
+           <form id="anexoIform">
+               <div>
+                   <label>Faturamento ultimos 12 meses</label>
+                   <input type="text" name="FatAcumulado">
+               </div>
+               <div>
+                    <label>Vendas</label>
+                    <input type="text" name="Vendas">
+                </div>
+                <div>
+                    <label>Vendas Monofásicas</label>
+                    <input type="text" name="VendasMono">
+                </div>
+                <div>
+                    <label>Vendas ICMS-ST</label>
+                    <input type="text" name="VendasSubst">
+                </div>
+                <div>
+                    <label>Vendas ICMS-ST e Mono</label>
+                    <input type="text" name="VendasSubstMono">
+                </div>
+           </form>
         </div>
     </div>
+    <script src="js/alteraAnexo.js"></script>
 </body>
 </html>
