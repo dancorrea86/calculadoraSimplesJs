@@ -35,27 +35,30 @@
            <form id="anexoIform">
                <div>
                    <label>Faturamento ultimos 12 meses</label>
-                   <input type="text" name="FatAcumulado">
+                   <input type="text" id="FatAcumulado" name="FatAcumulado">
                </div>
                <div>
                     <label>Vendas</label>
-                    <input type="text" name="Vendas">
+                    <input type="text" id="Vendas" name="Vendas">
                 </div>
                 <div>
                     <label>Vendas Monofásicas</label>
-                    <input type="text" name="VendasMono">
+                    <input type="text" id="VendasMono" name="VendasMono">
                 </div>
                 <div>
                     <label>Vendas ICMS-ST</label>
-                    <input type="text" name="VendasSubst">
+                    <input type="text" id="VendasSubst" name="VendasSubst">
                 </div>
                 <div>
                     <label>Vendas ICMS-ST e Mono</label>
-                    <input type="text" name="VendasSubstMono">
+                    <input type="text" id="VendasSubstMono" name="VendasSubstMono">
                 </div>
-           </form>
+           </form>       
         </div>
-    </div>
+        <div>
+                <button class="button" id="anexoI" onclick="showResults()">Calcula</button>
+        </div>
     <script src="js/alteraAnexo.js"></script>
+    <script src="js/simplesCalc.js"></script>   
 </body>
 </html>

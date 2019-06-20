@@ -1,16 +1,40 @@
-var attachement = 3
-var twelveRevenues = 360000;
+var attachement = 1;
+
+var twelveRevenues;
 
 var revenuesAttc1 = {
-    revenues: 2545.50,
-    revenusMono: 3000,
-    revenuesSt: 6000.54,
-    revenuesStandMomo: 4877.56,
+    // revenues: 2545.50,
+    // revenusMono: 3000,
+    // revenuesSt: 6000.54,
+    // revenuesStandMono: 4877.56,
 }
 
 var revenuesAttc3 = {
     revenues: 2545.50,
     revenuesRetention: 3000,
+}
+
+function getFatAccumulated() {
+    twelveRevenues = document.getElementById( "FatAcumulado" ).value;  
+    return twelveRevenues;
+}
+
+function getReveneusAttchI() {
+    revenuesAttc1 = {
+        revenues: document.getElementById( "Vendas" ).value, 
+        revenusMono: document.getElementById( "VendasMono" ).value, 
+        revenuesSt: document.getElementById( "VendasSubst" ).value, 
+        revenuesStandMono: document.getElementById( "VendasSubstMono" ).value
+    }
+    return revenuesAttc1
+}
+
+function getReveneusAttchIII() {
+    var revenuesAttc3 = {
+        revenues: 2545.50,
+        revenuesRetention: 3000,
+    }
+    return revenuesAttc3
 }
 
 const tradeBandsAttch1 = {
@@ -82,10 +106,11 @@ function calculateSimples() {
     if ( attachement == 1 ) {
         var aliquots = othersRateAtt1();
         console.log(aliquots)
+        console.log( revenuesAttc1.revenues )
         var simples = ( revenuesAttc1.revenues * aliquots[0] ) +
                       ( revenuesAttc1.revenusMono * aliquots[1] ) +
                       ( revenuesAttc1.revenuesSt * aliquots[2] ) +
-                      ( revenuesAttc1.revenuesStandMomo * aliquots[3] );
+                      ( revenuesAttc1.revenuesStandMono * aliquots[3] );
     } else if ( attachement == 3 ) {
         var aliquots = othersRateAtt3();
         console.log(aliquots)
@@ -95,11 +120,16 @@ function calculateSimples() {
     return simples.toFixed(2);
 }
 
-
-
-
-
-console.log(calculateSimples());
+function showResults() {
+    twelveRevenues = getFatAccumulated()
+    if ( attachement = 1) {
+        revenuesAttc1 = getReveneusAttchI()
+    } else {
+        revenuesAttc3 = getReveneusAttchIII()
+    }
+    
+    console.log(calculateSimples());
+}
 
 
 
